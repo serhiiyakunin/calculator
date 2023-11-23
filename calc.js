@@ -32,8 +32,8 @@ document.querySelector('.plus-minus').onclick = changeSign;
 function getPercent() {
     if (a !== '' && b !== '' ) {
         b = (a / 100) * b;
-        out.textContent = b ; 
-       }
+        out.textContent = parseFloat(b).toFixed(5); 
+    }
 }
  document.querySelector('.percent').onclick = getPercent;
 
@@ -65,7 +65,6 @@ document.querySelector('.buttons').onclick = (event) => {
             b = key;
             finish = false;
             out.textContent = b;
-
         }
         else  {
             b += key;
